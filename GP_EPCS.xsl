@@ -141,8 +141,11 @@
                         padding: .55mm 1mm;
                         font-size: 8.45pt;
                         font-weight: 400;
+                        line-height: 1.18;
                         text-align: center;
-                        white-space: nowrap;
+                        white-space: normal;
+                        overflow-wrap: break-word;
+                        word-break: normal;
                     }
 
                     .meta-table td {
@@ -150,8 +153,10 @@
                         padding: .55mm 1.15mm;
                         font-family: "Times New Roman", "Noto Serif CJK SC", SimSun, serif;
                         font-size: 7.75pt;
+                        line-height: 1.18;
                         text-align: center;
                         overflow-wrap: anywhere;
+                        word-break: break-word;
                     }
 
                     .meta-table .wide-value { text-align: left; padding-left: 1.8mm; }
@@ -176,6 +181,7 @@
                         font-size: 7.25pt;
                         text-align: center;
                         overflow-wrap: anywhere;
+                        word-break: break-word;
                     }
 
                     .equipment-kind {
@@ -198,12 +204,12 @@
 
                     .result-meta {
                         display: grid;
-                        grid-template-columns: minmax(34mm, 1.35fr) minmax(61mm, 2fr) auto;
+                        grid-template-columns: minmax(29mm, .9fr) minmax(0, 2.7fr) max-content;
                         align-items: center;
                         min-height: 12mm;
                         padding: 1.2mm 2mm;
                         border-bottom: var(--inner);
-                        column-gap: 2mm;
+                        column-gap: 1.5mm;
                     }
 
                     .result-title {
@@ -221,9 +227,15 @@
                     }
 
                     .tracking {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        gap: .65mm 1.2mm;
+                        min-width: 0;
                         text-align: left;
                         font-size: 7.7pt;
-                        white-space: nowrap;
+                        line-height: 1.25;
+                        white-space: normal;
                     }
 
                     .unit {
@@ -232,7 +244,7 @@
                         white-space: nowrap;
                     }
 
-                    .check-option { margin-left: 1.6mm; white-space: nowrap; }
+                    .check-option { white-space: nowrap; }
 
                     .box {
                         position: relative;
@@ -291,6 +303,7 @@
                         font-size: 6.9pt;
                         line-height: 1.15;
                         overflow-wrap: anywhere;
+                        word-break: break-word;
                     }
 
                     .result-table .symbol {
